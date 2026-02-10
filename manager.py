@@ -21,11 +21,11 @@ class StudentManager:
     def add_student(self, student):
         self.students.append(student.to_dict())
         self.save_students()
-        print("✅ Student added successfully.")
+        print(" Student added successfully.")
 
     def list_students(self):
         if not self.students:
-            print("⚠️ No students found.")
+            print(" No students found.")
             return
         for s in self.students:
             print(s)
@@ -35,16 +35,16 @@ class StudentManager:
             if s["id"] == student_id:
                 print(s)
                 return
-        print("❌ Student not found.")
+        print("Student not found.")
 
     def delete_student(self, student_id):
         for s in self.students:
             if s["id"] == student_id:
                 self.students.remove(s)
                 self.save_students()
-                print("🗑️ Student deleted.")
+                print(" Student deleted.")
                 return
-        print("❌ Student not found.")
+        print("Student not found.")
 
     def update_student(self, student_id, name, age, email, field):
         for s in self.students:
@@ -54,6 +54,7 @@ class StudentManager:
                 s["email"] = email
                 s["field"] = field
                 self.save_students()
-                print("✏️ Student updated.")
+                print("Student updated.")
                 return
-        print("❌ Student not found.")
+        print("Student not found.")
+
