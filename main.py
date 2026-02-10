@@ -49,12 +49,13 @@ def main():
             manager.delete_student(student_id)
 
         elif choice == "0":
-            print("👋 Goodbye!")
+            print("Goodbye!")
             break
 
         else:
-            print("❌ Invalid choice.")
+            print("Invalid choice.")
 
 
 if __name__ == "__main__":
     main()
+
